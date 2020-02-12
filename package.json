@@ -1,0 +1,80 @@
+{
+    "name": "@clementprevot/jicli",
+    "description": "A Command Line Interface (CLI) for Jira",
+    "version": "0.1.0",
+    "bin": {
+        "jicli": "bin/jicli"
+    },
+    "main": "src/cli.js",
+    "files": [
+        "bin/",
+        "src/",
+        ".config/jira.config.example"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Clément PRÉVOT <clement.prevot@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/clementprevot/jicli.git"
+    },
+    "bugs": {
+        "url": "https://github.com/clementprevot/jicli/issues"
+    },
+    "homepage": "https://github.com/clementprevot/jicli#readme",
+    "license": "MIT",
+    "engines": {
+        "npm": ">= 6.0.0",
+        "node": ">= 12.15.0"
+    },
+    "keywords": [
+        "jira",
+        "cli",
+        "node"
+    ],
+    "scripts": {
+        "dev": "NODE_ICU_DATA=node_modules/full-icu nodemon bin/jicli"
+    },
+    "dependencies": {
+        "@babel/core": "^7.8.4",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+        "@babel/plugin-proposal-optional-catch-binding": "^7.8.3",
+        "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+        "@babel/preset-env": "^7.8.4",
+        "@babel/register": "^7.8.3",
+        "@std/esm": "^0.26.0",
+        "chalk": "^3.0.0",
+        "clipboardy": "^2.1.0",
+        "commander": "^4.1.1",
+        "core-js": "3",
+        "full-icu": "^1.3.0",
+        "inquirer": "^7.0.4",
+        "jira-client": "git+https://github.com/clementprevot/node-jira-client.git",
+        "lodash": "^4.17.15",
+        "marked": "^0.8.0",
+        "marked-terminal": "^4.0.0",
+        "ora": "^4.0.3",
+        "require-up": "^0.4.0",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.3",
+        "babel-jest": "^25.1.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-jest": "^23.7.0",
+        "husky": "^4.2.2",
+        "jest": "^25.1.0",
+        "jest-environment-jsdom": "^25.1.0",
+        "jest-extended": "^0.11.5",
+        "jest-util": "^25.1.0",
+        "jest-watch-master": "^1.0.0",
+        "jest-watch-typeahead": "^0.4.2",
+        "lint-staged": "^10.0.7",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1"
+    }
+}
