@@ -1,0 +1,31 @@
+export default {
+    // Enter here the host of your Jira project.
+    host: 'empire.atlassian.net',
+
+    // Enter you username (usually e-mail adress).
+    username: 'darth.vader@empire.com',
+
+    // Enter the API token to use to access your Jira account.
+    // To learn more about API tokens:
+    //    https://confluence.atlassian.com/cloud/api-tokens-938839638.html
+    // To create and manage your API tokens:
+    //    https://id.atlassian.com/manage/api-tokens
+    password: '',
+
+    // You can enter here the ID of the default board that will be used to list,
+    // search or create issues.
+    defaultBoard: null,
+
+    // Allow the script to copy useful things (issues or board URL, ...) in your
+    // clipboard.
+    copyToClipboard: true,
+
+    // Define the locale you want to use to format date, number, ...
+    // See:
+    //    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/DateTimeFormat
+    locale: 'fr-FR'
+
+    // You can also enter any valid JiraClient option.
+    // For more information see:
+    //    https://jira-node.github.io/typedef/index.html#static-typedef-JiraApiOptions
+};
