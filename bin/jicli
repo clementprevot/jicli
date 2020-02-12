@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-try {
-    // eslint-disable-next-line no-global-assign
-    require = require('@std/esm')(module);
-} catch (_) {
-    // Nothing to do here.
-}
+// eslint-disable-next-line no-global-assign
+require = require('@std/esm')(module);
 
-require('@babel/register');
+require('@babel/register')({
+    ignore: [],
+    only: [/src/],
+});
 
 const program = require('commander');
 const winston = require('winston');
