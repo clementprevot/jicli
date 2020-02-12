@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+try {
+    // eslint-disable-next-line no-global-assign
+    require = require('@std/esm')(module);
+} catch (_) {
+    // Nothing to do here.
+}
+
+require('@babel/register');
+
+const program = require('commander');
+const winston = require('winston');
+
+program.version('1.0.0');
+program.parse(process.argv);
+
+const logger = winston.createLogger({
+    level: 'info',
+    transports: [
+        new winston.transports.Console({
+            format: winston.format.combine(
+                winston.format.colorize(),
+                winston.format.printf((info) => info.message),
+            ),
+        }),
+    ],
+});
+
+require('../src/cli').cli(program, logger);
