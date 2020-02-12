@@ -1,7 +1,7 @@
 {
     "name": "@clementprevot/jicli",
     "description": "A Command Line Interface (CLI) for Jira",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "bin": {
         "jicli": "bin/jicli"
     },
